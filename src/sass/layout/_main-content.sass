@@ -1,0 +1,81 @@
+.main-content__wrapper
+    display: flex
+    flex-direction: column
+    text-align: center
+
+.main-content__txt-wrapper
+    padding: 60px 30px
+
+.main-content__heading
+    color: $desaturated-red
+    text-transform: uppercase
+    font:
+        size: 2.2em
+        weight: 300
+    line-height: 1em
+    letter-spacing: 10px
+    margin-bottom: 20px
+    span
+        color: $dark-grayish-red
+        font-weight: 600
+    @media(min-width: 625px)
+        font-size: 2.8em
+
+.main-content__txt
+    font-size: .8em
+    color: $desaturated-red
+    padding: 0 5px
+    margin-bottom: 30px
+
+.main-contnetn__form
+    display: flex
+    justify-content: space-between
+    max-width: 95%
+    border: 1px solid $desaturated-red
+    border-right: none
+    border-radius: 40px
+    margin-bottom: 10px
+
+.main-content__input
+    border: none
+    padding: 10px 20px
+    background: inherit
+    color: inherit
+    flex-grow: 1
+
+::placeholder
+    color: lighten($desaturated-red, 15%)
+    font-size: .8em
+
+.main-content__error
+    align-self: center
+    margin-right: 10px
+    max-width: 20px
+
+.main-contnetn__btn
+    background-image: linear-gradient(to right, $gradient-2-from, $gradient-2-to)
+    width: 60px
+    border-radius: 25px
+    border: none
+    display: flex
+    align-items: center
+    justify-content: center
+    box-shadow: 0 4px 10px $gradient-2-from
+    cursor: pointer
+    flex-shrink: 0
+    &:hover
+        background: $gradient-2-from
+        box-shadow: 0 10px 20px $desaturated-red
+
+.main-content__btn__img
+    max-width: 12px
+
+input:focus
+    border: none
+
+.main-contnent__error-msg
+    color: $soft-red
+    text-align: left
+    padding-left: 20px
+    font:
+        size: .8em
