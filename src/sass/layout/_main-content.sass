@@ -2,9 +2,21 @@
     display: flex
     flex-direction: column
     text-align: center
+    @media (min-width: 1000px)
+        text-align: left
 
 .main-content__txt-wrapper
     padding: 60px 30px
+    @media (min-width: 600px)
+        padding: 60px 90px
+    @media (min-width: 700px)
+        padding: 60px 160px
+    @media (min-width: 1000px)
+        padding: 50px 120px
+    @media (min-width: 1300px)
+        padding: 70px 170px 70px 140px
+    @media (min-width: 1440px)
+        padding: 70px 190px 70px 160px
 
 .main-content__heading
     color: $desaturated-red
@@ -20,32 +32,65 @@
         font-weight: 600
     @media(min-width: 625px)
         font-size: 2.8em
+    @media (min-width: 1000px)
+        line-height: 1.1em
+    @media (min-width: 1300px)
+        font-size: 3.8em
+    @media (min-width: 1440px)
+        font-size: 4em
+        letter-spacing: 18px
 
 .main-content__txt
     font-size: .8em
     color: $desaturated-red
     padding: 0 5px
     margin-bottom: 30px
+    @media (min-width: 1000px)
+        font-size: .9em
+    @media (min-width: 1300px)
+        font-size: 1em
+        line-height: 1.6em
+    @media (min-width: 1440px)
+        font-size: 1.05em
+        margin-bottom: 40px
 
-.main-contnetn__form
+.main-content__form
     display: flex
     justify-content: space-between
     max-width: 95%
     border: 1px solid $desaturated-red
-    border-right: none
     border-radius: 40px
     margin-bottom: 10px
+
+.main-content__form-error
+    border: 3px solid $soft-red
 
 .main-content__input
     border: none
     padding: 10px 20px
+    border-top-left-radius: inherit
+    border-bottom-left-radius: inherit
+    border-top-right-radius: none
+    border-bottom-right-radius: none
     background: inherit
     color: inherit
     flex-grow: 1
+    margin-right: 10px
+    @media (max-width: 344px)
+        max-width: 70%
+    @media (min-width: 1300px)
+        padding: 14px 28px
+    @media (min-width: 1440px)
+        padding: 16px 32px
 
 ::placeholder
     color: lighten($desaturated-red, 15%)
     font-size: .8em
+    opacity: 1
+    @media (min-width: 1000px)
+        font-size: .9em
+    @media (min-width: 1300px)
+        font-size: 1em
 
 .main-content__error
     align-self: center
@@ -63,19 +108,33 @@
     box-shadow: 0 4px 10px $gradient-2-from
     cursor: pointer
     flex-shrink: 0
+    transform: translateX(2px)
     &:hover
         background: $gradient-2-from
         box-shadow: 0 10px 20px $desaturated-red
+    @media (min-width: 1000px)
+        width: 70px
+    @media (min-width: 1440px)
+        width: 100px
 
 .main-content__btn__img
     max-width: 12px
+    @media (min-width: 1000px)
+        max-width: 10px
+    @media (min-width: 1440px)
+        max-width: 13px
 
-input:focus
-    border: none
-
-.main-contnent__error-msg
-    color: $soft-red
+.main-content__msg
     text-align: left
     padding-left: 20px
-    font:
-        size: .8em
+    font-size: .8em
+    @media (min-width: 1000px)
+        font-size: .9em
+    @media (min-width: 1300px)
+        font-size: 1em
+
+.error-msg
+    color: $soft-red
+
+.success-msg
+    color: $success-green

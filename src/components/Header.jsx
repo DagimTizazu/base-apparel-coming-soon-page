@@ -3,9 +3,9 @@ import Logo from '../assets/logo.svg'
 
 function Header() {
   return (
-    <header>
+    <div className='header'>
       <img className='header__logo' src={Logo} alt="logo" />
-    </header>
+    </div>
   )
 }
 

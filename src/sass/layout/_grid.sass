@@ -1,8 +1,10 @@
+//desktop layout
 .grid-wrapper
     @media (min-width: 1000px)
         display: grid
-        grid-template-columns: 83% auto
-        grid-template-rows: 80px auto
+        grid-template-columns: 58% auto
+    @media (min-width: 1440px)
+        grid-template-columns: 57% auto
 
 .hero-img-mobile
     max-width: 100%
@@ -14,5 +16,13 @@
     display: none
     @media (min-width: 1000px)
         display: block
+        width: 100%
         grid-column: 2/3
         grid-row: 1/2
+
+.main-content
+    @media (min-width: 1000px)
+        background-image: url('./assets/bg-pattern-desktop.svg')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: contain

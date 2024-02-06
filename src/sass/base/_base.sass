@@ -10,9 +10,12 @@ body
     background: $gradient-1-to
     color: $gradient-2-from
     font-family: $main-font
+    @media (min-width: 1000px)
+        background-image: linear-gradient(130deg, $gradient-1-from, $gradient-1-to)
 
 input
     font: inherit
 
-input:focus
+input, input:focus
     outline: none
+    border: none
