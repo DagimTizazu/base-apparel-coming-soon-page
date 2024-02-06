@@ -45,7 +45,7 @@ function MainContent() {
             <div className={message ? 'main-content__form' : 'main-content__form main-content__form-error'} >
             <input id='email' className='main-content__input' type="text" placeholder='Email Address' autoComplete='off' value={email} onChange={emailValidation} required />
               {message ? null : <img className='main-content__error' src={Error} alt="error" /> }
-            <button className='main-contnetn__btn' onClick={handleClick}><img className='main-content__btn__img' src={Arrow} alt="" /></button>
+              <button className='main-contnetn__btn' onClick={handleClick} id="send" title="send"><img className='main-content__btn__img' src={Arrow} alt="" /></button>
             </div>
             {message ? null : <p className='main-content__msg error-msg'>Please Provide a valid email</p>}
             {send && (<p className='main-content__msg success-msg'>Thank you! We will keep you updated.</p>)}
